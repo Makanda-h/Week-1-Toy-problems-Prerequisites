@@ -1,15 +1,14 @@
-const prompt = require("prompt-sync")();
-const speedOfCar = prompt("please input the speed of car:");
-if (speedOfCar < 70) {
+const speedOfCar = prompt("speed of car:");
+
+if (speedOfCar <= 70) {
   console.log("Ok");
 } else {
   function speedOver() {
-    let demerit = (speedOfCar - 70) / 5;
-    if (demerit > 12) {
+    let demeritPoints = (speedOfCar - 70) / 5;
+    if (demeritPoints > 12) {
       console.log("License suspended");
     } else {
-      const message = `Points: ${demerit}`;
-      console.log(message);
+      console.log(`Points: ${demeritPoints}`);
     }
   }
   speedOver();
